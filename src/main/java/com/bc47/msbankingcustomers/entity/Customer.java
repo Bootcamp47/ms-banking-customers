@@ -26,6 +26,6 @@ public class Customer {
     private String status;
     private String email;
     private String mobilePhoneImeiNumber;
-    private Integer ownedPasiveProductsQty = 0;
-    private Integer ownedActiveProductsQty = 0;
+    private Integer ownedPasiveProductsQty;
+    private Integer ownedActiveProductsQty;
 }

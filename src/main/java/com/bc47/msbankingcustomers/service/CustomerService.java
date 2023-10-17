@@ -63,6 +63,7 @@ public class CustomerService implements CustomersApiDelegate {
                 .ownedActiveProductsQty(customerDTO.getOwnedActiveProductsQty())
                 .build();
         customerRepository.save(customer);
+        customerDTO.setId(customer.getId());
         customerDTO.setCreatedAt(new Date().toString());
         return ResponseEntity.ok(customerDTO);
     }
