@@ -33,7 +33,7 @@ public class CustomerService implements CustomersApiDelegate {
     }
 
     @Override
-    public ResponseEntity<CustomerDTO> retrieveCustomer(Long id) {
+    public ResponseEntity<CustomerDTO> retrieveCustomer(String id) {
         List<Customer> customers = customerRepository.findAll();
         Optional<CustomerDTO> customerFound =
                 customers
@@ -73,7 +73,7 @@ public class CustomerService implements CustomersApiDelegate {
     }
 
     @Override
-    public ResponseEntity<CustomerDTO> deleteCustomer(Long id) {
+    public ResponseEntity<CustomerDTO> deleteCustomer(String id) {
         List<Customer> customers = customerRepository.findAll();
         Optional<CustomerDTO> customerFound =
                 customers
